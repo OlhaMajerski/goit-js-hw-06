@@ -1,20 +1,26 @@
 class StringBuilder {
-    
+    #value
+
+    constructor(initialValue) {
+        this.#value = initialValue;
+    }
+
+    getValue() {
+        return this.#value;
+    }
+
+    padEnd(str) {
+        this.#value = this.#value.concat(str);
+    }
+    padStart(str) {}
+    padBoth(str) {
+        this.#value = str + this.#value + str;
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 const builder = new StringBuilder(".");
+
+
 console.log(builder.getValue()); // "."
 builder.padStart("^");
 console.log(builder.getValue()); // "^."
