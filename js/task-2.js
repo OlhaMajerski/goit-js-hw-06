@@ -1,5 +1,8 @@
 class Storage {
  #items = [];
+ constructor(params){
+    this.#items = params;
+}
   getItems() {
     return this.#items;
 }
@@ -10,9 +13,7 @@ class Storage {
  removeItem(itemToRemove){
     this.#items = this.#items.filter(item => item !== itemToRemove);
 }
-constructor(params){
-    this.#items = params;
-}
+
 }
 
 const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
