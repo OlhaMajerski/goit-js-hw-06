@@ -12,9 +12,12 @@ class StringBuilder {
     padEnd(str) {
         this.#value = this.#value.concat(str);
     }
-    padStart(str) {}
+    padStart(str) {
+        this.#value = `${str}${this.#value}`;
+    }
     padBoth(str) {
-        this.#value = str + this.#value + str;
+        this.#value = `${str}${this.#value}${str}`;
+        //this.#value = str + this.#value + str;
     }
 
 }
