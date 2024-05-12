@@ -1,5 +1,5 @@
 class Storage {
- #items = [];
+ #items;
  constructor(params){
     this.#items = params;
 }
